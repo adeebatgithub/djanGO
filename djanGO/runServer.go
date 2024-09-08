@@ -8,10 +8,15 @@ import (
 func RunServer() {
 	settings := getSettings()
 	router := gin.Default()
+
 	Urls(router)
+
 	router.LoadHTMLGlob("templates/*")
+	DBEngine()
+
 	fmt.Println("djanGO development server")
 	fmt.Println("Server is started at 127.0.0.1:" + settings.Port)
+
 	error := router.Run(":" + settings.Port)
 	if error != nil{
 		panic(error)

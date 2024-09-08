@@ -11,7 +11,6 @@ func main() {
 	switch args[1] {
 	case "runserver":
 		djanGO.RunServer()
-		
 	default:
 		fmt.Println("Unknown command: ", args[1])
 	}

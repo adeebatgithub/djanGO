@@ -14,6 +14,7 @@ type Settings struct {
         User     string
         Password string
         DBName   string
+        SSLMODE  string
     }
 }
 
