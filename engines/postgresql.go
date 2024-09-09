@@ -7,17 +7,17 @@ import (
     "log"
 )
 
-func PostgreSQL(settings map[string]string) {
+func PostgreSQL(database map[string]string) {
     var err error
 
     // Configure the database connection
     dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=%s",
-	settings["host"],
-	settings["user"],
-	settings["password"],
-	settings["dbname"],
-	settings["port"],
-	settings["sslmode"],
+	database["host"],
+	database["user"],
+	database["password"],
+	database["dbname"],
+	database["port"],
+	database["sslmode"],
 	)
     DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
     if err != nil {

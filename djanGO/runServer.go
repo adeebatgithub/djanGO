@@ -3,10 +3,10 @@ package djanGO
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"djanGO/djanGO_project"
 )
 
 func RunServer() {
-	settings := getSettings()
 	router := gin.Default()
 
 	Urls(router)
@@ -15,18 +15,10 @@ func RunServer() {
 	DBEngine()
 
 	fmt.Println("djanGO development server")
-	fmt.Println("Server is started at 127.0.0.1:" + settings.Port)
+	fmt.Println("Server is started at 127.0.0.1:" + djanGO_project.PORT)
 
-	error := router.Run(":" + settings.Port)
+	error := router.Run(":" + djanGO_project.PORT)
 	if error != nil{
 		panic(error)
 	}
-}
-
-func getSettings() *Settings {
-	settings, error := LoadSettings()
-	if error != nil {
-		panic(error)
-	}
-	return settings
 }

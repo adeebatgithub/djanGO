@@ -1,4 +1,4 @@
-package testApp
+package djanGO_app
 
 import (
 	"net/http"

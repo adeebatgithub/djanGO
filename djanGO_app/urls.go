@@ -1,4 +1,4 @@
-package testApp
+package djanGO_app
 
 import "github.com/gin-gonic/gin"
 

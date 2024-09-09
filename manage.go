@@ -1,4 +1,4 @@
-package main
+package manage
 
 import (
 	"djanGO/djanGO"

@@ -2,9 +2,9 @@ package djanGO
 
 import (
 	"github.com/gin-gonic/gin"
-	"djanGO/testApp"
+	"djanGO/djanGO_project"
 )
 
 func Urls(router *gin.Engine) {
-	testApp.UrlPatterns(router)
+	djanGO_project.UrlPatterns(router)
 }	
