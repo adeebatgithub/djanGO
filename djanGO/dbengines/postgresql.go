@@ -7,6 +7,8 @@ import (
     "log"
 )
 
+var DB *gorm.DB
+
 func PostgreSQL(database map[string]string) {
     var err error
 

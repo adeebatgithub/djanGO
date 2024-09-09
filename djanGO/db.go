@@ -9,5 +9,3 @@ import (
 func DBEngine() {
     dbengines.PostgreSQL(djanGO_project.DATABASE)
 }
-
-
